@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试讯飞API</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <h1>测试讯飞API</h1>
+    <button onclick="testAPI()">测试API</button>
+    <div id="result"></div>
+
+    <script>
+        function testAPI() {
+            const appId = 'your_app_id_here'; // 请从 .env 中获取
+            const apiKey = 'your_api_key_here'; // 请从 .env 中获取
+            const apiSecret = 'your_api_secret_here'; // 请从 .env 中获取
+            const dateTime = new Date().toISOString().replace('Z', '+0800');
+            const signatureRandom = Math.random().toString(36).substring(2, 18);
+            const fileSize = '35278';
+            const fileName = 'output_16k_mono.wav';
+            const duration = '0';
+            const language = 'autodialect';
+
+            // 构建签名参数
+            const signParams = {
+                appId,
+                accessKeyId: apiKey,
+                dateTime,
+                signatureRandom,
+                fileSize,
+                fileName,
+                duration,
+                language
+            };
+
+            // 生成签名
+            const sortedKeys = Object.keys(signParams).sort();
+            const stringToSign = sortedKeys.map(key => {
+                const value = signParams[key];
+                return `${key}=${value}`;
+            }).join('&');
+
+            console.log('用于签名的字符串:', stringToSign);
+            console.log('使用的签名密钥:', apiSecret);
+
+            const signature = CryptoJS.HmacSHA256(stringToSign, apiSecret).toString(CryptoJS.enc.Base64);
+            console.log('生成的签名:', signature);
+
+            // 构建查询参数
+            const queryParams = new URLSearchParams({
+                appId,
+                accessKeyId: apiKey,
+                dateTime,
+                signatureRandom,
+                fileSize,
+                fileName,
+                duration,
+                language
+            });
+
+            const fullUrl = `https://office-api-ist-dx.iflyaisol.com/v2/upload?${queryParams.toString()}`;
+            console.log('完整请求URL:', fullUrl);
+
+            // 发送请求
+            fetch(fullUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/octet-stream',
+                    'signature': signature
+                },
+                body: 'test'
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('响应:', data);
+                document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('错误:', error);
+                document.getElementById('result').innerHTML = '错误: ' + error.message;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "audio-transcription-backend",
+  "version": "1.0.0",
+  "description": "Backend server for audio format conversion using FFmpeg",
+  "type": "commonjs",
+  "main": "server.ts",
+  "scripts": {
+    "start": "ts-node server.ts",
+    "dev": "ts-node-dev server.ts"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.3.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.11.30",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  }
+}

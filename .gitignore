@@ -1,0 +1,38 @@
+# 依赖目录
+node_modules/
+
+# 环境变量文件
+.env
+
+# 构建输出
+dist/
+
+# 日志文件
+*.log
+server.log
+
+# 二进制工具包
+ffmpeg.7z
+
+# 音频、视频数据文件
+*.wav
+*.mp3
+*.mp4
+*.webm
+*.ogg
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时目录
+temp/
+tmp/
