@@ -1,7 +1,7 @@
 {
-  "name": "audio-transcription-backend",
+  "name": "audio-video-transcription-backend",
   "version": "1.0.0",
-  "description": "Backend server for audio format conversion using FFmpeg",
+  "description": "Backend server for audio/video format conversion and transcription using FFmpeg",
   "type": "commonjs",
   "main": "server.ts",
   "scripts": {

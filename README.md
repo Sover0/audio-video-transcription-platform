@@ -148,8 +148,8 @@
 ### 克隆项目
 
 ```bash
-git clone https://github.com/Sover0/audio-transcription-platform.git
-cd audio-transcription-platform
+git clone https://github.com/Sover0/audio-video-transcription-platform.git
+cd audio-video-transcription-platform
 ```
 
 ### 安装依赖
@@ -228,8 +228,8 @@ npm run dev
 
 ## 项目目录结构
 
-```
-audio-transcription-platform/
+```text
+audio-video-transcription-platform/
 ├── .gitignore                          # Git 排除规则
 ├── index.html                          # Vite 入口 HTML
 ├── package.json                        # 前端依赖与脚本
