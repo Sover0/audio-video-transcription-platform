@@ -34,21 +34,45 @@
 
 ![音视频录制与上传页面 - 支持麦克风录音、摄像头录像、文件拖拽上传](images/screenshot-upload1.png)
 
-![文件上传成功后的状态展示](images/screenshot-upload2.png)
+![录音与录像模式切换界面](images/screenshot-upload2.png)
+
+![文件上传进度展示](images/screenshot-upload3.png)
+
+![上传成功后的文件信息展示](images/screenshot-upload4.png)
+
+![录制过程中的实时预览画面](images/screenshot-upload5.png)
 
 #### 转录结果与 AI 总结
 
 ![转录结果展示页面 - 包含时间戳、说话人分离、文本内容](images/screenshot-result1.png)
 
-![AI 智能总结页面 - 精选标题、核心观点、内容大纲、金句摘录、关键词标签](images/screenshot-result2.png)
+![AI 智能总结页面 - 精选标题、核心观点、内容大纲](images/screenshot-result2.png)
+
+![金句摘录与关键词标签展示](images/screenshot-result3.png)
+
+![转录文本搜索与高亮功能](images/screenshot-result4.png)
+
+![内容大纲导航与快速定位](images/screenshot-result5.png)
 
 #### 多格式导出
 
 ![多格式导出弹窗 - 支持 TXT、DOCX、Markdown、SRT、JSON、PDF 格式](images/screenshot-export1.png)
 
+![导出格式选择详情](images/screenshot-export2.png)
+
+![导出进度与结果反馈](images/screenshot-export3.png)
+
+![导出文件预览](images/screenshot-export4.png)
+
 #### 个性化主题系统
 
 ![配色切换面板 - 8 套预设配色方案与自定义颜色输入](images/screenshot-theme1.png)
+
+![深色主题效果展示](images/screenshot-theme2.png)
+
+![浅色主题效果展示](images/screenshot-theme3.png)
+
+![自定义配色配置界面](images/screenshot-theme4.png)
 
 ---
 
